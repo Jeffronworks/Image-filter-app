@@ -31,10 +31,16 @@ import {filterImageFromURL, deleteLocalFiles} from './util/util';
 
   //! END @TODO1
   
-  // Root Endpoint
+ 
   // Displays a simple message to the user
-  
+
   // Start the Server
+  
+   // Root Endpoint
+  app.get("/", (req , res ) => {
+    return res.status(200).send("Welcome to ImagefilterAPI")
+  })
+
   app.listen( port, () => {
       console.log( `server running http://localhost:${ port }` );
       console.log( `press CTRL+C to stop server` );
